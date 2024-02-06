@@ -57,8 +57,8 @@
             ]
         }
     ],
-    "results": [
-        { "id": 1, "text": "Você sobreviveria!" },
-        { "id": 2, "text": "Você não sobreviveria!" }
-    ]
+    "results": {
+        "A": "Você não sobreviveria!",
+        "B": "Você sobreviveria!"
+    }
 }

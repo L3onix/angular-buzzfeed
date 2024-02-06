@@ -7,35 +7,37 @@ import quizQuestions from '../../../assets/data/quiz-questions.json';
   standalone: true,
   imports: [TuiButtonModule],
   templateUrl: './quiz.component.html',
-  styleUrl: './quiz.component.css'
+  styleUrl: './quiz.component.css',
 })
 export class QuizComponent implements OnInit {
-  title:string = '';
-  questions:any[] = [];
-  question:any;
-  questionIndex:number = 0;
-  answers:string[] = [];
-  results:any[] = [];
-  result:any;
-  finish:boolean = false;
-  
-  constructor() {
-  }
+  title: string = '';
+  questions: any[] = [];
+  question: any;
+  questionIndex: number = 0;
+  answers: string[] = [];
+  results: any;
+  result: string = '';
+  finish: boolean = false;
+
+  constructor() {}
 
   ngOnInit(): void {
     this.title = quizQuestions.title;
     this.questions = quizQuestions.questions;
     this.results = quizQuestions.results;
-    console.log(this.questions)
+    console.log(this.questions);
     this.loadQuestion();
   }
 
-  onClick(event: MouseEvent): void {
-    
+  onClick(event: MouseEvent, option: any): void {
+    this.answers.push(option.alias);
+
+    // finish condition
     this.finish = this.isFinish();
     if (this.finish) {
       this.loadResult();
     }
+
     this.loadQuestion();
   }
 
@@ -46,10 +48,20 @@ export class QuizComponent implements OnInit {
   loadQuestion(): void {
     this.question = this.questions[this.questionIndex];
     this.questionIndex++;
-    console.log(this.question);
   }
 
   loadResult(): void {
-    this.result = this.results[0]
+    const result = this.answers.reduce((previous, current, i, arr) => {
+      if (
+        arr.filter((item) => item === previous).length >
+        arr.filter((item) => item === current).length
+      ) {
+        return previous;
+      } else {
+        return current;
+      }
+    });
+
+    this.result = this.results[result as keyof typeof this.results];
   }
 }
