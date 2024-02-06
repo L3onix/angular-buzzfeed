@@ -1,0 +1,64 @@
+{
+    "title": "Você sobreviveria a um ataque zumbi?",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Qual arma você escolheria para se defender?",
+            "options": [
+                { "id": 1, "text": "Faca", "alias": "A" },
+                { "id": 2, "text": "Pistola", "alias": "B" },
+                { "id": 3, "text": "Serra elétrica", "alias": "A" },
+                { "id": 4, "text": "Arco e flecha", "alias": "B" },
+                { "id": 5, "text": "Espingarda", "alias": "B" }
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Você teria companheiros de aventura?",
+            "options": [
+                { "id": 1, "text": "Não, ando sozinho", "alias": "A" },
+                { "id": 2, "text": "1 ou 2 pessoas", "alias": "A" },
+                { "id": 3, "text": "3 a 5 pessoas", "alias": "B" },
+                { "id": 4, "text": "5 a 10 pessoas", "alias": "B" },
+                { "id": 5, "text": "Quanto mais melhor!", "alias": "A" }
+            ]
+        },
+        {
+            "id": 3,
+            "question": "Em que tipo de ambiente você ficaria?",
+            "options": [
+                { "id": 1, "text": "Sou nomad, me mantenho em movimento", "alias": "A" },
+                { "id": 2, "text": "Um acampamento na floresta", "alias": "A" },
+                { "id": 3, "text": "Uma fazenda", "alias": "B" },
+                { "id": 4, "text": "Uma cidade pequena do interior", "alias": "B" },
+                { "id": 5, "text": "Uma base do exército", "alias": "A" }
+            ]
+        },
+        {
+            "id": 4,
+            "question": "O que você faria se alguém próximo a você se infectasse com o vírus zumbi?",
+            "options": [
+                { "id": 1, "text": "Fujo do local imediatamente", "alias": "B" },
+                { "id": 2, "text": "Expulso a pessoa do local", "alias": "A" },
+                { "id": 3, "text": "Tento prender a pessoa em alguma grade", "alias": "A" },
+                { "id": 4, "text": "A mantenho isolada para evitar que outras pessoas se infectem", "alias": "A" },
+                { "id": 5, "text": "Tento encontrar uma cura para o vírus zumbi", "alias": "A" }
+            ]
+        },
+        {
+            "id": 5,
+            "question": "O que você faria com outras pessoas que encontrasse durante sua aventura?",
+            "options": [
+                { "id": 1, "text": "Seria pacífico, sempre é bom fazer amigos", "alias": "A" },
+                { "id": 2, "text": "Seria agressivo, não preciso de nenhuma ajuda", "alias": "A" },
+                { "id": 3, "text": "Desconfiado, nunca se sabe o que pode acontecer", "alias": "B" },
+                { "id": 4, "text": "Diplomático, e necessário criar regras", "alias": "B" },
+                { "id": 5, "text": "Fobia social, fugiria de qualquer pessoa que encontrasse", "alias": "A" }
+            ]
+        }
+    ],
+    "results": [
+        { "id": 1, "text": "Você sobreviveria!" },
+        { "id": 2, "text": "Você não sobreviveria!" }
+    ]
+}
